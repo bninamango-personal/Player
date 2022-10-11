@@ -10,7 +10,7 @@ namespace bninamango
 
             int speed = 1;
 
-            Vector2 direction = new Vector2(0, 0) * speed;
+            Vector2 direction = new Vector2(0, 0);
 
             while (true)
             {
@@ -50,9 +50,9 @@ namespace bninamango
 
                 Console.Clear();
                 
-                player.Move(direction);
+                player.Move(direction * speed);
 
-                //player.Draw();
+                player.Draw();
             }
         }
     }

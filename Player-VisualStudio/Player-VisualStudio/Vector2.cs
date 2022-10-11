@@ -9,6 +9,11 @@ namespace bninamango
         public int x;
         public int y;
 
+        public static Vector2 Zero 
+        {
+            get => new Vector2(0, 0);
+        }
+
         public static Vector2 Up
         {
             get => new Vector2(0, 1);
