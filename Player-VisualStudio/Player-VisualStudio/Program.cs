@@ -6,11 +6,11 @@ namespace bninamango
     {
         static void Main(string[] args)
         {
-            Player player = new Player('@', new Vector2(0, 0));
+            Player player = new Player('P', Vector2.Zero);
 
-            int speed = 1;
+            Vector2 direction = Vector2.Zero;
 
-            Vector2 direction = new Vector2(0, 0);
+            int speed = 3;
 
             while (true)
             {
@@ -49,7 +49,7 @@ namespace bninamango
                 #endregion
 
                 Console.Clear();
-                
+
                 player.Move(direction * speed);
 
                 player.Draw();

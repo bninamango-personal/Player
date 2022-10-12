@@ -9,7 +9,7 @@ namespace bninamango
         public int x;
         public int y;
 
-        public static Vector2 Zero 
+        public static Vector2 Zero
         {
             get => new Vector2(0, 0);
         }
@@ -50,7 +50,7 @@ namespace bninamango
 
         public static Vector2 operator -(Vector2 a, Vector2 b)
         {
-            int x = a.x - a.x;
+            int x = a.x - b.x;
             int y = a.y - b.y;
 
             return new Vector2(x, y);
