@@ -4,23 +4,23 @@ using System.Text;
 
 namespace bninamango
 {
-    public class Player
+    class Player
     {
         private char character;
         private Vector2 position;
 
-        public Player(char character, Vector2 position) 
+        public Player(char character, Vector2 position)
         {
             this.character = character;
             this.position = position;
         }
 
-        public void Move(Vector2 direction) 
+        public void Move(Vector2 direction)
         {
             position += direction;
         }
 
-        public void Draw() 
+        public void Draw()
         {
             position.x = (position.x >= 0) ? position.x : 0;
             position.y = (position.y >= 0) ? position.y : 0;
