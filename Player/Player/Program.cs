@@ -10,7 +10,7 @@ namespace bninamango
 
             Vector2 direction = Vector2.Zero;
 
-            int speed = 3;
+            int speed = 1;
 
             while (true)
             {
