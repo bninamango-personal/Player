@@ -63,10 +63,7 @@ namespace bninamango
 
             void Intro()
             {
-                Console.WriteLine("Developed by");
-                Console.WriteLine();
-
-                string[] lines = File.ReadAllLines("Tittle.txt");
+                string[] lines = File.ReadAllLines("Title.txt");
 
                 for (int i = 0; i < lines.Length; i++)
                 {
