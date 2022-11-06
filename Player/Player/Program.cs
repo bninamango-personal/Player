@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace bninamango
 {
@@ -6,11 +7,16 @@ namespace bninamango
     {
         static void Main(string[] args)
         {
+            Intro();
+            Instructions();
+
             Player player = new Player('P', Vector2.Zero);
 
             Vector2 direction = Vector2.Zero;
 
             int speed = 1;
+
+            player.Draw();
 
             while (true)
             {
@@ -53,6 +59,44 @@ namespace bninamango
                 player.Move(direction * speed);
 
                 player.Draw();
+            }
+
+            void Intro()
+            {
+                Console.WriteLine("Developed by");
+                Console.WriteLine();
+
+                string[] lines = File.ReadAllLines("Tittle.txt");
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    Console.WriteLine(lines[i]);
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Press any key to continue");
+                Console.WriteLine();
+
+                Console.ReadKey();
+
+                Console.Clear();
+            }
+
+            void Instructions()
+            {
+                Console.WriteLine("Instructions");
+                Console.WriteLine("▲ : Up movement");
+                Console.WriteLine("▼ : Down movement");
+                Console.WriteLine("► : Right movement");
+                Console.WriteLine("◄ : Left movement");
+
+                Console.WriteLine();
+
+                Console.WriteLine("Press any key to continue");
+
+                Console.ReadKey();
+
+                Console.Clear();
             }
         }
     }
